@@ -6,16 +6,15 @@ Este é um projeto de uma landing page completa para um estúdio de tatuagem. A 
 
 - Galeria de tatuagens.  
 - Seção sobre o estúdio e os artistas.  
-- Formulário de contato funcional.  
+- Formulário de contato funcional.
+  
 
 ## 📋 Demonstração  
 
 ![Galeria de Tatuagens](image/galeria.png)  
 
-👉 **[Acesse a demonstração aqui](https://seusite.com)** *(adicione o link do site ao vivo)*  
 
 ## 🖼️ Recursos  
-
 
 
 - **Formulário de Contato:**  
