@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+font-family: 'Open Sans', sans-serif;
+font-family: 'Pacifico', cursive;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    max-width: 80%;
+    margin: auto;
+}
+
+a{
+   text-decoration: none; 
+   transition: 0.5s;
+}
+
+h2{
+    margin-top: 20px;
+    font-family: 'Pacifico', cursive;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.home {
+  display: flex; /* Torna o container .home um flexbox */
+  justify-content: space-between; /* Espaça igualmente os filhos para que fiquem lado a lado */
+  align-items: center; /* Centraliza os itens verticalmente */
+  flex-wrap: nowrap; /* Garante que as divs não quebrem para a próxima linha */
+}
+
+.left {
+  flex: 1; /* A div .left ocupará a largura disponível */
+  padding-right: 20px; 
+  padding-top: 400px;/* Adiciona um espaço entre o conteúdo da esquerda e da direita */
+}
+
+.right {
+  flex: 1; /* A div .right ocupará a largura disponível */
+  display: flex; /* Torna o container .right um flexbox */
+  justify-content: center; /* Centraliza a imagem dentro da .right */
+  align-items: center; /* Centraliza a imagem verticalmente com o conteúdo de .left */
+}
+
+
+
+
+/*--------------------------------cabeçalho-----------------------------*/
+header {
+  background-image: url('image/Projeto.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* ou ajuste conforme necessário */
+  color: white; /* Para garantir que o texto no header seja legível */
+   
+  
+}
+
+/* Estilo base dos botões de navegação */
+#menuitem li a {
+  -webkit-font-smoothing: antialiased;
+ 
+  border: none;
+  color: #fff;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  text-decoration: none;
+  user-select: none;
+  letter-spacing: 1px;
+  padding: 5px 10px; /* Ajuste conforme necessário */
+  text-transform: uppercase;
+ 
+  position: relative; /* Necessário para o efeito de bolha */
+}
+
+/* Estilo dos botões quando o mouse passa por cima */
+#menuitem li a:hover {
+  background-color: #90feb5; /* Cor de fundo ao passar o mouse */
+  color: #fff;
+}
+
+/* Estilo dos botões quando clicados */
+#menuitem li a:active {
+  transform: scale(0.95);
+}
+
+/* Efeito de bolha */
+#menuitem li a::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 400%;
+  top: -150%;
+  left: -50%;
+  background: rgba(0, 10, 10, 0.2); /* Efeito de bolha */
+  transition: all 0.1s ease-out;
+  pointer-events: none;
+}
+
+/* Efeito de bolha ao passar o mouse */
+#menuitem li a:hover::after {
+  background: rgba(0, 10, 10, 0.4); /* Efeito ao passar o mouse */
+}
+
+
+
+header .navbar{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+}
+header a {
+    color: white;
+    font-size: 14px;
+}
+
+header nav {
+    flex: 1;
+    text-align: right;
+}
+
+header nav ul{
+    display: inline-block;
+    list-style: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    margin: 15px;
+    transition: 0.5s;
+}
+
+header nav ul li.active {
+    background-color: rgb(0, 100, 100);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+header nav i{
+    transition: 0.5s;
+    cursor: pointer;
+}
+header nav i:hover{
+    color: rgb(244, 44, 44);
+}
+ header nav li:hover { 
+    background-color: rgb(0, 100, 100);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+header .navbar span{
+    text-align: center;
+    margin-left:  20px;
+    color: white;
+    font-size: 25px;
+    display: none;
+}
+
+
+@media only screen and (max-width:768px) {
+  header nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: max-height 0.5s;
+    text-align: center;
+  }
+
+  header nav ul li {
+    display: block;
+    margin: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  header nav ul li a {
+    color: white;
+  }
+
+  header .navbar span {
+    color: white;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+
+/*--------------------------------home-----------------------------*/
+
+.flex {
+    display: flex;
+}
+
+/* .left, .right{
+    width: 50%;
+} */
+
+button {
+    outline: none;
+    border: none;
+    background: none;
+    padding: 12px 50px;
+    background: rgb(0, 100, 100);
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    border: 1px solid rgb(0, 100, 100);
+    background: none;
+    color: rgb(0, 100, 100);
+}
+
+
+.home{
+    margin-top: 50px;
+    place-items: center;
+}
+
+
+
+.home p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 500px;
+}
+.home .left {
+    width:70%;
+    margin-left: 20px;
+    margin-top: 5%;
+}
+
+.home .right img{
+    width: auto;
+    height: auto;
+}
+.home .right {
+    padding-top: 40px;
+}
+.dots {
+  
+  justify-content: center;
+  display: flex; /* Assegura que os labels estejam dispostos em linha */
+  padding-right: 500px;
+  padding-top: 30px;
+}
+
+.dots label {
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.dots label:hover {
+  background: rgb(0, 100, 100);
+}
+
+.dots label.active {
+  background: rgb(0, 100, 100); /* Cor para o label ativo */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+  }
+  
+
+  .about .item img {
+    width: 500px; /* Ajuste para o tamanho desejado */
+}
+
+  .about {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .about .item {
+    margin-top: 50px;
+  }
+  
+  .about .item h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-right: 100px ;
+    padding-left: 90px;
+  }
+  
+  .about .item svg {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .about .item p {
+    opacity: 0.8;
+    margin-top: 20px;
+  }
+  
+  .about .content {
+    text-align: left;
+    margin-top: 100px;
+  }
+  
+  .about .content .left {
+    width: 40%;
+    margin-right: 50px;
+    padding-top: 45px;
+  }
+  
+  .about .content .right {
+    margin-top: 0px;
+    padding: 20px;
+  }
+  
+  .about .content h2 {
+    font-size: 40px;
+    font-weight: 100;
+    margin-bottom: 20px;
+    margin-right: 70px;
+  }
+  .about .content button {
+    margin: 70px;;
+  }
+  
+  .about .content p {
+    margin-bottom: 100px;
+  }
+
+  .gallery {
+    text-align: center; /* Centraliza o título */
+    background-color: #212121;
+    color: white;
+  }
+
+
+.image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza as imagens no container */
+    gap: 10px; /* Espaço entre as imagens */
+}
+
+.img_item {
+    flex: 1 1 calc(33.333% - 20px); /* Ajusta o tamanho das imagens para ocupar 1/3 do container menos o espaço entre elas */
+    max-width: calc(33.333% - 20px); /* Garante que as imagens não excedam o tamanho calculado */
+    box-sizing: border-box;
+}
+
+
+.img_item img {
+    width: 100%; /* Faz a imagem ocupar todo o espaço do seu container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Adiciona bordas arredondadas, opcional */
+}
+
+.img_item7 {
+  width: 500px;
+  height: 350px; /* Faz a imagem i7 ocupar duas colunas */
+}
+
+.img_item1 {
+  grid-column: 1 / 2; /* Faz a imagem i1 ocupar a primeira coluna */
+  grid-row: 1 / 3; /* Faz a imagem i1 ocupar as duas primeiras linhas */
+}
+
+.img_item3 img {
+  width: auto;
+  height: 938px;
+}
+
+.small-img {
+  width: 50%; /* Ajuste o valor conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+/*----------footer--------*/
+footer {
+  margin-top: 10px;
+  background: #212121;
+  color: white;
+}
+
+footer .left {
+  margin-top: 70px;
+  width: 70%;
+}
+
+footer .right {
+  margin-top: 70px;
+  width: 30%;
+}
+
+footer .left .input {
+  width: 90%;
+}
+
+footer .left input {
+  width: 100%;
+  padding: 15px;
+  background: white;
+  border: none;
+  outline: none;
+}
+
+footer .left .arrow {
+  width: 5%;
+  background: #0e6c66;
+  text-align: center;
+  line-height: 40px;
+}
+
+footer .right i {
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  text-align: center;
+  line-height: 50px;
+  margin-right: 20px;
+  transition: 0.5s;
+}
+
+footer .right i:hover {
+  border: 1px solid rgb(0, 100, 100);
+  color: rgb(0, 100, 100);
+}
+
+footer .grid {
+  margin-top: 50px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+footer h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+footer .box {
+  margin-bottom: 20px;
+}
+
+footer .box img {
+  width: 100px;
+  height: 70px;
+  margin-right: 20px;
+}
+
+footer iframe {
+  width: auto;
+  height: auto;
+  margin-top: 70px;
+}
+
+.legal {
+  padding: 20px;
+  text-align: center;
+}
+
+.legal i {
+  color: #0e6c66;
+}
+
+/*----------footer--------*/
+@media only screen and (max-width:768px) {
+  header {
+    height: auto;
+  }
+
+  .dots {
+    margin-bottom: 20px;
+  }
+
+  .home .right img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about img {
+    margin-top: 70px;
+  }
+
+  footer .right i {
+    margin-bottom: 20px;
+  }
+
+  footer .grid,
+  .customer .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width:514px) {
+
+  .right,
+  .left {
+    width: 100%;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+  }
+
+  .dots {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  footer .left {
+    width: 100%;
+  }
+
+  footer .right {
+    width: 100%;
+  }
+
+  footer .left .input {
+    width: 85%;
+  }
+
+  footer .left input {
+    width: 100%;
+  }
+
+  footer .left .arrow {
+    width: 15%;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
