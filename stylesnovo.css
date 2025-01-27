@@ -102,14 +102,16 @@ header {
 #menuitem li a::after {
   content: '';
   position: absolute;
-  width: 200%;
-  height: 400%;
-  top: -150%;
-  left: -50%;
+  width: 100%; /* Ajuste para o mesmo tamanho do botão */
+  height: 100%; /* Ajuste para o mesmo tamanho do botão */
+  top: 0;
+  left: 0;
+  border-radius: 8px; /* Para arredondar o quadrado, se necessário */
   background: rgba(0, 10, 10, 0.2); /* Efeito de bolha */
-  transition: all 0.1s ease-out;
+  transition: all 0.3s ease-out;
   pointer-events: none;
 }
+
 
 /* Efeito de bolha ao passar o mouse */
 #menuitem li a:hover::after {
